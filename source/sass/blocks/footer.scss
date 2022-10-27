@@ -1,0 +1,35 @@
+.footer {
+  background-color: $color-tangaroa;
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+
+  @include vp-767 {
+    padding: 40px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.footer__logo {
+  margin-right: 40px;
+
+  @include vp-1023 {
+    margin-right: 25px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 5px;
+    padding: 0;
+  }
+}
+
+.footer__social {
+  margin-left: auto;
+
+  @include vp-767 {
+    margin-left: 0;
+  }
+}

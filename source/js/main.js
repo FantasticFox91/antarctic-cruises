@@ -4,6 +4,16 @@ import {initModals} from './modules/modals/init-modals';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
+  if (document.querySelector('.burger__button')) {
+    const burgerBtn = document.querySelector('.burger__button');
+    const burgerContainer = document.querySelector('.burger');
+    burgerContainer.classList.remove('burger--noJS');
+    burgerContainer.classList.add('burger--close');
+    burgerBtn.addEventListener('click', () => {
+      burgerContainer.classList.toggle('burger--close');
+      burgerContainer.classList.toggle('burger--open');
+    });
+  }
 
   // Utils
   // ---------------------------------
