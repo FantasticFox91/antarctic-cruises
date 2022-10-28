@@ -1,0 +1,77 @@
+.booking {
+  position: relative;
+}
+
+.booking__background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.booking__container {
+  display: flex;
+  padding: 50px 163px 50px 164px;
+  justify-content: space-between;
+  align-items: center;
+
+  @include vp-1439 {
+    padding: 50px 163px 50px 164px;
+  }
+
+  @include vp-1023 {
+    padding-top: 88px;
+    padding-bottom: 100px;
+    flex-direction: column;
+  }
+
+  @include vp-767 {
+    padding: 58px 15px 69px;
+  }
+}
+
+.booking__description {
+  margin-top: 7px;
+
+  @include vp-1023 {
+    margin-top: 0;
+    margin-bottom: 52px;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    margin-bottom: 34px;
+  }
+}
+
+.booking__heading {
+  margin: 0;
+  margin-bottom: 24px;
+
+  @include fonts(40px, 29px, 700, $color-tangaroa);
+
+  @include vp-1023 {
+    margin-bottom: 5px;
+    font-size: 34px;
+    line-height: 51px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 14px;
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+
+.booking__text {
+  margin: 0;
+  line-height: 27px;
+  color: $color-tangaroa;
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

@@ -1,0 +1,29 @@
+.catalog {
+  margin-bottom: 119px;
+
+  @include vp-1023 {
+    margin-bottom: 100px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 65px;
+  }
+}
+
+.catalog__list {
+  display: grid;
+  margin: 0;
+  padding: 0 15px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  list-style-type: none;
+
+  @include vp-1023 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include vp-767 {
+    padding: 0 9px;
+    grid-template-columns: 1fr;
+  }
+}

@@ -759,6 +759,8 @@ html {
 
 .heading {
   margin: 0;
+  margin-bottom: 50px;
+  text-align: center;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 28px;
   line-height: 42px;
@@ -791,6 +793,355 @@ html {
   margin: 0;
   font-size: 16px;
   line-height: 24px;
+}
+
+.advanatges {
+  position: relative;
+  margin-bottom: 85px;
+  padding-top: 110px;
+  padding-bottom: 115px;
+  overflow: hidden;
+}
+
+.advantages__wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: #e3ecf6;
+  z-index: -2;
+}
+
+.advantages__background {
+  position: absolute;
+  top: -150px;
+  left: 0;
+  width: 100%;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.advantages__list {
+  display: -ms-grid;
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  color: #011c40;
+}
+
+.advantages__item {
+  padding: 30px 30px 50px;
+  background-color: #f9fbfd;
+}
+
+.advantages__subheading {
+  position: relative;
+  margin: 0;
+  margin-bottom: 8px;
+  padding-top: 50px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  color: #011c40;
+}
+
+.advantages__subheading br {
+  display: none;
+}
+
+.advantages__subheading--liner::before {
+  position: absolute;
+  content: "";
+  width: 27px;
+  height: 32px;
+  top: 0;
+  background-image: url("../img/sprite/liner.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.advantages__subheading--all-inclusive::before {
+  position: absolute;
+  content: "";
+  width: 38px;
+  height: 32px;
+  top: 0;
+  background-image: url("../img/sprite/all-inclusive.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.advantages__subheading--trip::before {
+  position: absolute;
+  content: "";
+  width: 44px;
+  height: 32px;
+  top: 0;
+  background-image: url("../img/sprite/trip.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.advantages__description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.catalog {
+  margin-bottom: 119px;
+}
+
+.catalog__list {
+  display: -ms-grid;
+  display: grid;
+  margin: 0;
+  padding: 0 15px;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  list-style-type: none;
+}
+
+.card {
+  position: relative;
+  min-height: 386px;
+  padding: 28px 25px 0 25px;
+  background-color: #011c40;
+}
+
+.card__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.card__image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.card__heading {
+  position: absolute;
+  bottom: 23px;
+  left: 30px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+}
+
+.card__subheading {
+  margin: 0;
+  margin-bottom: 13px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+}
+
+.card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 322px;
+}
+
+.card__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.card__name {
+  margin-bottom: 1px;
+  font-weight: 500;
+}
+
+.card__description {
+  margin: 0;
+  font-weight: 400;
+  color: #d8d8d9;
+}
+
+.card__description:not(:last-of-type) {
+  margin-bottom: 11px;
+}
+
+.card__button {
+  display: block;
+  margin-top: auto;
+  padding: 9px 0 10px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+  background-color: #f9fbfd;
+}
+
+.card:hover .card__heading {
+  z-index: -1;
+}
+
+.card:hover .card__background {
+  top: 0;
+  left: 0;
+}
+
+.card:hover .card__image {
+  opacity: 0;
+}
+
+.card:hover .card__button {
+  position: relative;
+  z-index: 1;
+}
+
+.booking {
+  position: relative;
+}
+
+.booking__background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.booking__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 163px 50px 164px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.booking__description {
+  margin-top: 7px;
+}
+
+.booking__heading {
+  margin: 0;
+  margin-bottom: 24px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 40px;
+  line-height: 29px;
+  font-weight: 700;
+  color: #011c40;
+}
+
+.booking__text {
+  margin: 0;
+  line-height: 27px;
+  color: #011c40;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 403px;
+  padding: 44px 50px 50px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #011c40;
+  -webkit-box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
+  box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
+}
+
+.form h3 {
+  margin: 0;
+  margin-bottom: 27px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  color: #f9fbfd;
+}
+
+.form input {
+  margin-bottom: 20px;
+  padding: 11px 16px;
+  font-size: 14px;
+  line-height: 21px;
+  border: none;
+  background-color: #f9fbfd;
+}
+
+.form input[type=checkbox] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+.form label:has(input) {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 3px 0 2px;
+  padding-left: 24px;
+  font-size: 10px;
+  line-height: 13px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.form span {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-color: #f9fbfd;
+}
+
+.form input[type=checkbox]:checked + span {
+  background: #f9fbfd url("../img/sprite/checkmark.svg") no-repeat 50% 50%;
+}
+
+.form button {
+  padding: 15px 0 17px;
+  font-size: 14px;
+  line-height: 11px;
+  font-weight: 600;
+  border: none;
+  background-color: #f9fbfd;
+  cursor: pointer;
 }
 
 .footer {
@@ -889,6 +1240,10 @@ html {
   .journey__container {
     padding-bottom: 145px;
   }
+
+  .booking__container {
+    padding: 50px 163px 50px 164px;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -958,6 +1313,7 @@ html {
   }
 
   .heading {
+    margin-bottom: 51px;
     font-size: 26px;
     line-height: 36px;
   }
@@ -982,6 +1338,80 @@ html {
     padding-right: 5px;
   }
 
+  .advanatges {
+    margin-bottom: 91px;
+    padding-top: 91px;
+    padding-bottom: 101px;
+  }
+
+  .advantages__list {
+    gap: 30px;
+  }
+
+  .advantages__item {
+    padding: 26px 16px 20px 20px;
+  }
+
+  .advantages__subheading {
+    padding-top: 45px;
+    line-height: 25px;
+  }
+
+  .advantages__subheading br {
+    display: block;
+  }
+
+  .advantages__subheading--liner::before {
+    width: 21px;
+  }
+
+  .advantages__subheading--all-inclusive::before {
+    width: 27px;
+  }
+
+  .advantages__subheading--trip::before {
+    width: 36px;
+  }
+
+  .catalog {
+    margin-bottom: 100px;
+  }
+
+  .catalog__list {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    padding: 29px 35px 0;
+  }
+
+  .card__heading {
+    bottom: 27px;
+    left: 35px;
+  }
+
+  .booking__container {
+    padding-top: 88px;
+    padding-bottom: 100px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .booking__description {
+    margin-top: 0;
+    margin-bottom: 52px;
+    text-align: center;
+  }
+
+  .booking__heading {
+    margin-bottom: 5px;
+    font-size: 34px;
+    line-height: 51px;
+  }
+
   .footer__logo {
     margin-right: 25px;
   }
@@ -999,7 +1429,7 @@ html {
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 16px;
+    padding: 0 15px;
   }
 
   .header__container {
@@ -1215,6 +1645,7 @@ html {
   }
 
   .heading {
+    margin-bottom: 31px;
     font-size: 24px;
     line-height: 34px;
   }
@@ -1235,8 +1666,96 @@ html {
     max-width: none;
   }
 
+  .journey__heading {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
   .journey__background {
     padding-right: 0;
+  }
+
+  .advanatges {
+    margin-bottom: 25px;
+    padding-top: 59px;
+  }
+
+  .advantages__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .advantages__item {
+    padding-left: 19px;
+  }
+
+  .advantages__subheading {
+    padding-right: 50px;
+  }
+
+  .catalog {
+    margin-bottom: 65px;
+  }
+
+  .catalog__list {
+    padding: 0 9px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 29px 25px 0;
+  }
+
+  .card__heading {
+    bottom: 17px;
+    left: 25px;
+  }
+
+  .booking__container {
+    padding: 58px 15px 69px;
+  }
+
+  .booking__description {
+    margin-bottom: 34px;
+  }
+
+  .booking__heading {
+    margin-bottom: 14px;
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  .booking__text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .form {
+    padding: 35px 30px 40px;
+  }
+
+  .form h3 {
+    margin-bottom: 28px;
+    line-height: 25px;
+    text-align: center;
+  }
+
+  .form label:has(input) {
+    max-width: 180px;
+    margin-bottom: 24px;
+    padding-left: 28px;
+    padding-top: 0;
+    line-height: 12px;
+  }
+
+  .form span {
+    width: 20px;
+    height: 20px;
+  }
+
+  .form button {
+    padding: 16px 0;
   }
 
   .footer__container {

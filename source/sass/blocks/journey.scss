@@ -46,6 +46,11 @@
     margin-bottom: 16px;
     padding-right: 30px;
   }
+
+  @include vp-767 {
+    margin-bottom: 15px;
+    text-align: left;
+  }
 }
 
 .journey__text {
