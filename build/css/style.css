@@ -1891,7 +1891,7 @@ html {
   }
 
   .contacts__container {
-    padding-bottom: 26px;
+    padding-bottom: 65px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
@@ -1900,7 +1900,12 @@ html {
   }
 
   .contacts__map {
+    height: 316px;
     padding: 0 15px;
+  }
+
+  .contacts__background {
+    height: 316px;
   }
 
   .footer__container {
