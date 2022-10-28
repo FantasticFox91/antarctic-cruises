@@ -787,6 +787,7 @@ html {
 
 .journey__heading {
   margin-bottom: 24px;
+  text-align: left;
 }
 
 .journey__text {
@@ -1017,12 +1018,14 @@ html {
 
 .booking {
   position: relative;
+  overflow: hidden;
+  margin-bottom: 120px;
 }
 
 .booking__background {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 898px;
   top: 0;
   left: 0;
   z-index: -1;
@@ -1144,6 +1147,89 @@ html {
   cursor: pointer;
 }
 
+.contacts__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 121px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.contacts__map {
+  width: 560px;
+  height: 306px;
+}
+
+.contacts__background {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.contacts__description {
+  max-width: 500px;
+}
+
+.contacts__heading {
+  margin: 0;
+  margin-bottom: 30px;
+  text-align: left;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  color: #011c40;
+}
+
+.contacts__heading br {
+  display: block;
+}
+
+.contacts__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 22px;
+  list-style-type: none;
+}
+
+.contacts__link {
+  position: relative;
+  display: block;
+  padding-left: 28px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #011c40;
+}
+
+.contacts__link::before {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  top: 0;
+  left: 0;
+}
+
+.contacts__link--map::before {
+  height: 22px;
+  background: url("../img/sprite/pin.svg");
+}
+
+.contacts__link--phone::before {
+  background: url("../img/sprite/phone.svg");
+}
+
 .footer {
   background-color: #011c40;
 }
@@ -1152,6 +1238,8 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 15px;
+  padding-bottom: 15px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1243,6 +1331,10 @@ html {
 
   .booking__container {
     padding: 50px 163px 50px 164px;
+  }
+
+  .contacts__container {
+    padding-bottom: 121px;
   }
 }
 
@@ -1391,6 +1483,10 @@ html {
     left: 35px;
   }
 
+  .booking {
+    margin-bottom: 100px;
+  }
+
   .booking__container {
     padding-top: 88px;
     padding-bottom: 100px;
@@ -1410,6 +1506,38 @@ html {
     margin-bottom: 5px;
     font-size: 34px;
     line-height: 51px;
+  }
+
+  .contacts__container {
+    padding-bottom: 80px;
+    gap: 30px;
+  }
+
+  .contacts__map {
+    width: 324px;
+    height: 355px;
+  }
+
+  .contacts__background {
+    width: 324px;
+    height: 355px;
+  }
+
+  .contacts__description {
+    margin-top: -22px;
+    max-width: 324px;
+  }
+
+  .contacts__heading {
+    margin-bottom: 27px;
+  }
+
+  .contacts__heading br {
+    display: none;
+  }
+
+  .contacts__link--map::before {
+    top: 5px;
   }
 
   .footer__logo {
@@ -1712,8 +1840,12 @@ html {
     left: 25px;
   }
 
+  .booking {
+    margin-bottom: 80px;
+  }
+
   .booking__container {
-    padding: 58px 15px 69px;
+    padding: 58px 15px 65px;
   }
 
   .booking__description {
@@ -1758,6 +1890,19 @@ html {
     padding: 16px 0;
   }
 
+  .contacts__container {
+    padding-bottom: 26px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    gap: 35px;
+  }
+
+  .contacts__map {
+    padding: 0 15px;
+  }
+
   .footer__container {
     padding: 40px 15px;
     -webkit-box-orient: vertical;
@@ -1770,7 +1915,7 @@ html {
   }
 
   .footer__logo {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     padding: 0;
   }
 

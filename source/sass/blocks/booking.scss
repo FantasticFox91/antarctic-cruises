@@ -1,11 +1,21 @@
 .booking {
   position: relative;
+  overflow: hidden;
+  margin-bottom: 120px;
+
+  @include vp-1023 {
+    margin-bottom: 100px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 80px;
+  }
 }
 
 .booking__background {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 898px;
   top: 0;
   left: 0;
   z-index: -1;
@@ -28,7 +38,7 @@
   }
 
   @include vp-767 {
-    padding: 58px 15px 69px;
+    padding: 58px 15px 65px;
   }
 }
 

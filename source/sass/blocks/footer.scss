@@ -4,6 +4,8 @@
 
 .footer__container {
   display: flex;
+  padding-top: 15px;
+  padding-bottom: 15px;
   align-items: center;
 
   @include vp-767 {
@@ -21,7 +23,7 @@
   }
 
   @include vp-767 {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     padding: 0;
   }
 }
