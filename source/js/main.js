@@ -3,16 +3,19 @@ import {initModals} from './modules/modals/init-modals';
 
 // ---------------------------------
 
+const burgerContainer = document.querySelector('.burger');
+const burgerBtn = document.querySelector('.burger__button');
+const mapContainer = document.querySelector('#map');
+const DEFAULT_COORDINATES = [59.938635, 30.323118];
+const DEFAULT_ZOOM = 15.5;
+
 window.addEventListener('DOMContentLoaded', () => {
-  if (document.querySelector('.burger__button')) {
-    const burgerBtn = document.querySelector('.burger__button');
-    const burgerContainer = document.querySelector('.burger');
-    burgerContainer.classList.remove('burger--noJS');
-    burgerContainer.classList.add('burger--close');
-    burgerBtn.addEventListener('click', () => {
-      burgerContainer.classList.toggle('burger--close');
-      burgerContainer.classList.toggle('burger--open');
-    });
+  if (burgerBtn) {
+    initBurger();
+  }
+
+  if (mapContainer) {
+    initMap();
   }
 
   // Utils
@@ -29,6 +32,43 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
   });
 });
+
+const initBurger = () => {
+  burgerContainer.classList.remove('burger--noJS');
+  burgerContainer.classList.add('burger--close');
+  burgerBtn.addEventListener('click', toggleBurger);
+};
+
+const toggleBurger = () => {
+  burgerContainer.classList.toggle('burger--close');
+  burgerContainer.classList.toggle('burger--open');
+};
+
+const initMap = () => {
+  mapContainer.innerHTML = '';
+  createMap();
+};
+
+const createMap = () => {
+  let myMap;
+  let myPlacemark;
+  ymaps.ready(init);
+  function init() {
+    myMap = new ymaps.Map(mapContainer, {
+      center: DEFAULT_COORDINATES,
+      zoom: DEFAULT_ZOOM,
+    });
+
+    myPlacemark = new ymaps.Placemark(DEFAULT_COORDINATES, {}, {
+      iconLayout: 'default#image',
+      iconImageHref: '../img/sprite/pin.svg',
+      iconImageSize: [18, 22],
+      iconImageOffset: [-18, -22],
+    });
+
+    myMap.geoObjects.add(myPlacemark);
+  }
+};
 
 // ---------------------------------
 
