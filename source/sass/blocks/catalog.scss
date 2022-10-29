@@ -1,5 +1,5 @@
 .catalog {
-  margin-bottom: 119px;
+  margin-bottom: 120px;
 
   @include vp-1023 {
     margin-bottom: 100px;
@@ -8,6 +8,10 @@
   @include vp-767 {
     margin-bottom: 65px;
   }
+}
+
+.catalog__heading {
+  margin-bottom: 49px;
 }
 
 .catalog__list {
@@ -23,7 +27,7 @@
   }
 
   @include vp-767 {
-    padding: 0 9px;
+    padding: 0 10px;
     grid-template-columns: 1fr;
   }
 }

@@ -1,5 +1,9 @@
 .logo {
-  margin-top: 5px;
+  margin-top: 6px;
+
+  @include vp-1023 {
+    margin-top: 8px;
+  }
 
   @include vp-767 {
     margin-top: 0;

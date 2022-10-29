@@ -1,8 +1,31 @@
 .card {
   position: relative;
   min-height: 386px;
-  padding: 28px 25px 0 25px;
+  padding: 29px 25px 0 25px;
   background-color: $color-tangaroa;
+  transition: box-shadow $trans-default;
+
+  @include hover {
+    box-shadow: 0 4px 35px $color-tangaroa-form-opacity;
+
+    & .card__heading {
+      z-index: -1;
+    }
+
+    & .card__background {
+      top: 0;
+      left: 0;
+    }
+
+    & .card__image {
+      opacity: 0;
+    }
+
+    & .card__button {
+      position: relative;
+      z-index: 1;
+    }
+  }
 
   @include vp-1023 {
     padding: 29px 35px 0;
@@ -13,25 +36,45 @@
   }
 }
 
+.card:has(.card__button:focus) {
+  .card__heading {
+    z-index: -1;
+  }
+
+  .card__background {
+    top: 0;
+    left: 0;
+  }
+
+  .card__image {
+    opacity: 0;
+  }
+
+  .card__button {
+    position: relative;
+    z-index: 1;
+  }
+}
+
 .card__background {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  transition: all $trans-default;
+  transition: top, left, $trans-default;
 }
 
 .card__image {
   height: 100%;
   width: 100%;
-  object-fit: cover;
-  transition: all $trans-default;
+  transition: opacity $trans-default;
+  background-color: $color-tangaroa;
 }
 
 .card__heading {
   position: absolute;
-  bottom: 23px;
+  bottom: 22px;
   left: 30px;
   margin: 0;
   font-size: 18px;
@@ -45,7 +88,7 @@
 
   @include vp-767 {
     bottom: 17px;
-    left: 25px
+    left: 25px;
   }
 }
 
@@ -93,24 +136,10 @@
   line-height: 21px;
   font-weight: 600;
   background-color: $color-alice-blue;
-}
+  transition: $trans-default;
+  user-select: none;
 
-.card:hover {
-  .card__heading {
-    z-index: -1;
-  }
-
-  .card__background {
-    top: 0;
-    left: 0;
-  }
-
-  .card__image {
-    opacity: 0;
-  }
-
-  .card__button {
-    position: relative;
-    z-index: 1;
+  @include hover {
+    transform: scale(1.05);
   }
 }

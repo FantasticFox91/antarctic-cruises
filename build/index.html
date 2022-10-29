@@ -39,22 +39,22 @@
             <nav class="navigation burger__wrapper">
               <ul class="navigation__list burger__list">
                 <li class="navigation__item">
-                  <a class="navigation__link" href="#">
+                  <a class="navigation__link" href="#advantages">
                     Преимущества
                   </a>
                 </li>
                 <li class="navigation__item">
-                  <a class="navigation__link" href="#">
+                  <a class="navigation__link" href="#journey">
                     Направления
                   </a>
                 </li>
                 <li class="navigation__item">
-                  <a class="navigation__link" href="#">
+                  <a class="navigation__link" href="#trips">
                     Ближайшие круизы
                   </a>
                 </li>
                 <li class="navigation__item">
-                  <a class="navigation__link" href="#">
+                  <a class="navigation__link" href="#contacts">
                     Контакты
                   </a>
                 </li>
@@ -75,9 +75,9 @@
               <h1 class="main-block__heading">Круизы в&nbsp;Антарктику</h1>
               <p class="main-block__subheadeing">Волшебный мир айсбергов и&nbsp;пингвинов</p>
             </div>
-         </div>
+          </div>
         </section>
-        <section class="journey">
+        <section class="journey" id="journey">
           <div class="container journey__container">
             <div class="journey__description">
               <h2 class="heading journey__heading">Путешествие на&nbsp;край Земли</h2>
@@ -90,7 +90,7 @@
             </picture>
           </div>
         </section>
-        <section class="advantages">
+        <section class="advantages" id="advantages">
           <div class="advantages__wrapper">
             <picture>
               <source type="image/webp" srcset="./img/advantages-bg.webp, ./img/advantages-bg@2x.webp 2x" width="1366" height="562">
@@ -107,7 +107,7 @@
               </li>
               <li class="advantages__item">
                 <h3 class="advantages__subheading advantages__subheading--all-inclusive">Cистема <br> все включено</h3>
-                <p class="advantages__description">Все наши круизы работают по&nbsp;системе &laquo;Все Включено&raquo;. Великолепные блюда и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.</p>
+                <p class="advantages__description">Все наши круизы работают по&nbsp;системе "Все Включено". Великолепные блюда и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.</p>
               </li>
               <li class="advantages__item">
                 <h3 class="advantages__subheading advantages__subheading--trip">Экскурсионные <br> туры на&nbsp;Zodiac</h3>
@@ -116,9 +116,9 @@
             </ul>
           </div>
         </section>
-        <section class="catalog">
+        <section class="catalog" id="trips">
           <div class="container">
-            <h2 class="heading">Ближайшие круизы</h2>
+            <h2 class="heading catalog__heading">Ближайшие круизы</h2>
             <ul class="catalog__list">
               <li class="catalog__item">
                 <div class="card">
@@ -371,7 +371,7 @@
                 <label for="first-name" class="visually-hidden">Имя</label>
                 <input type="text" name="first-name" id="first-name" placeholder="Имя" required>
                 <label for="phone-number" class="visually-hidden">Телефон</label>
-                <input type="tel" name="phone-number" id="phone-number" placeholder="Телефон" required>
+                <input type="number" name="phone-number" id="phone-number" placeholder="Телефон" max="999999999999" required>
                 <label for="email" class="visually-hidden">Email</label>
                 <input type="email" name="email" id="email" placeholder="Email" required>
                 <label>
@@ -383,7 +383,7 @@
             </form>
           </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
           <h2 class="visually-hidden">Контакты</h2>
           <div class="container contacts__container">
             <div class="contacts__map" id="map">
@@ -468,8 +468,8 @@
         </div>
       </footer>
     </div>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=f4064449-aed6-4597-84cc-a7cd5c3d5651&lang=ru_RU"></script>
     <script src="js/vendor.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=f4064449-aed6-4597-84cc-a7cd5c3d5651&lang=ru_RU" type="text/javascript"></script>
     <script src="js/main.min.js"></script>
   </body>
 </html>

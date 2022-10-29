@@ -64,6 +64,14 @@
     background: $color-alice-blue url("../img/sprite/checkmark.svg") no-repeat 50% 50%;
   }
 
+  label:has(input:focus) {
+    outline: 1px solid $color-alice-blue;
+  }
+
+  input[type="checkbox"]:focus + span {
+    border-color: $color-alice-blue;
+  }
+
   button {
     padding: 15px 0 17px;
     font-size: 14px;
@@ -72,6 +80,12 @@
     border: none;
     background-color: $color-alice-blue;
     cursor: pointer;
+    user-select: none;
+    transition: $trans-default;
+
+    @include hover {
+      transform: scale(1.05);
+    }
   }
 
   @include vp-767 {

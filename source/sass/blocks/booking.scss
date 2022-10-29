@@ -8,7 +8,7 @@
   }
 
   @include vp-767 {
-    margin-bottom: 80px;
+    margin-bottom: 58px;
   }
 }
 
@@ -19,6 +19,7 @@
   top: 0;
   left: 0;
   z-index: -1;
+  background-color: $color-alice-blue;
 }
 
 .booking__container {
@@ -52,7 +53,7 @@
   }
 
   @include vp-767 {
-    margin-bottom: 34px;
+    margin-bottom: 35px;
   }
 }
 
@@ -77,11 +78,26 @@
 
 .booking__text {
   margin: 0;
+  padding-right: 250px;
   line-height: 27px;
   color: $color-tangaroa;
+
+  @include vp-1023 {
+    max-width: 352px;
+    margin: 0 auto;
+    padding-right: 0;
+  }
 
   @include vp-767 {
     font-size: 16px;
     line-height: 22px;
+  }
+}
+
+.booking__text br {
+  display: none;
+
+  @include vp-767 {
+    display: block;
   }
 }
