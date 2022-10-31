@@ -1,11 +1,14 @@
 .header {
   z-index: 1;
+
+  @include vp-767 {
+    min-height: 106px;
+  }
 }
 
 .header__container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 
   @include vp-1023 {
     padding-right: 45px;

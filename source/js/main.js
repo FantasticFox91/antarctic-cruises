@@ -6,6 +6,8 @@ import {initModals} from './modules/modals/init-modals';
 const burgerContainer = document.querySelector('.burger');
 const burgerBtn = document.querySelector('.burger__button');
 const mapContainer = document.querySelector('#map');
+const header = document.querySelector('.header__container');
+const mainBlock = document.querySelector('.main-block');
 const DEFAULT_COORDINATES = [59.938635, 30.323118];
 const DEFAULT_ZOOM = 15.5;
 const PIN_SIZE = [18, 22];
@@ -18,6 +20,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
   if (mapContainer) {
     initMap();
+  }
+
+  if (mainBlock) {
+    setHeaderHeight();
   }
 
   // Utils
@@ -34,6 +40,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
   });
 });
+
+window.addEventListener('resize', () => setHeaderHeight());
 
 const initBurger = () => {
   burgerContainer.classList.remove('burger--noJS');
@@ -70,6 +78,12 @@ const createMap = () => {
 
     myMap.geoObjects.add(myPlacemark);
   }
+};
+
+const setHeaderHeight = () => {
+  let headerHeight = header.offsetHeight;
+  mainBlock.style.setProperty('--headerHeight', (headerHeight + 38) + 'px');
+  mainBlock.style.setProperty('--padding-top', (headerHeight + 200) + 'px');
 };
 
 // ---------------------------------

@@ -10,6 +10,12 @@
   }
 }
 
+.catalog__container {
+  @media (min-width: 1024px) and (max-width: 1200px) {
+    padding: 0 10px;
+  }
+}
+
 .catalog__heading {
   margin-bottom: 49px;
 }
