@@ -36,7 +36,7 @@
   background-color: $color-tangaroa;
 
   @include vp-1023 {
-    width: 852px;
+    width: 854px;
     height: 638px;
     max-width: none;
     top: 5px;
@@ -44,6 +44,8 @@
   }
 
   @include vp-767 {
+    width: 758px;
+    height: 570px;
     top: 0;
   }
 }

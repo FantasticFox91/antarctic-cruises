@@ -52,6 +52,7 @@ const initBurger = () => {
 const toggleBurger = () => {
   burgerContainer.classList.toggle('burger--close');
   burgerContainer.classList.toggle('burger--open');
+  document.body.classList.toggle('scroll-lock');
 };
 
 const initMap = () => {

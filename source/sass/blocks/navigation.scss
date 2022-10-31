@@ -87,6 +87,7 @@
 .navigation--footer {
   .navigation__list {
     max-width: 890px;
+    overflow: hidden;
   }
 
   @include vp-1023 {

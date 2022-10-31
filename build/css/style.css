@@ -714,6 +714,7 @@ html {
 
 .navigation--footer .navigation__list {
   max-width: 890px;
+  overflow: hidden;
 }
 
 .burger {
@@ -818,6 +819,10 @@ html {
   margin: 0;
   font-size: 16px;
   line-height: 24px;
+}
+
+.journey__background {
+  background-color: #f9fbfd;
 }
 
 .advantages {
@@ -1480,7 +1485,7 @@ html {
   }
 
   .main-block__background {
-    width: 852px;
+    width: 854px;
     height: 638px;
     max-width: none;
     top: 5px;
@@ -1524,7 +1529,7 @@ html {
   }
 
   .journey__background {
-    padding-right: 5px;
+    max-width: 324px;
   }
 
   .advantages {
@@ -1897,6 +1902,8 @@ html {
   }
 
   .main-block__background {
+    width: 758px;
+    height: 570px;
     top: 0;
   }
 
@@ -1938,7 +1945,7 @@ html {
   }
 
   .journey__background {
-    padding-right: 0;
+    max-width: 290px;
   }
 
   .advantages {
@@ -1981,6 +1988,13 @@ html {
 
   .booking {
     margin-bottom: 58px;
+  }
+
+  .booking__background {
+    width: 1210px;
+    height: 807px;
+    top: -32px;
+    left: -485px;
   }
 
   .booking__container {
