@@ -44,7 +44,6 @@ window.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('resize', () => setHeaderHeight());
 
 const initBurger = () => {
-  burgerContainer.classList.remove('burger--noJS');
   burgerContainer.classList.add('burger--close');
   burgerBtn.addEventListener('click', toggleBurger);
 };

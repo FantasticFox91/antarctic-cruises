@@ -22,7 +22,7 @@
     <div class="wrapper">
 <!-- Header -->
       <header class="header">
-        <div class="burger burger--noJS">
+        <div class="burger burger--no-js">
           <div class="container header__container burger__container">
             <div class="logo burger__logo">
               <a class="logo__link">
@@ -31,11 +31,11 @@
                 </svg>
               </a>
             </div>
-            <a class="header__button burger__button" href="#">
+            <button class="header__button burger__button" type="button">
               <span class="visually-hidden">
                 Показать/скрыть бургер меню
               </span>
-            </a>
+            </button>
             <nav class="navigation burger__wrapper">
               <ul class="navigation__list burger__list">
                 <li class="navigation__item">
@@ -367,19 +367,19 @@
               <p class="booking__text">Забронируйте тур <br> за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
             </div>
             <form class="form" action="https://echo.htmlacademy.ru" method="post">
-                <h3>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
-                <label for="first-name" class="visually-hidden">Имя</label>
-                <input type="text" name="first-name" id="first-name" placeholder="Имя" required>
-                <label for="phone-number" class="visually-hidden">Телефон</label>
-                <input type="number" name="phone-number" id="phone-number" placeholder="Телефон" max="999999999999" required>
-                <label for="email" class="visually-hidden">Email</label>
-                <input type="email" name="email" id="email" placeholder="Email" required>
-                <label>
-                  <input type="checkbox" name="personal-information-agree" value="agree" required>
-                  <span></span>
-                  Я&nbsp;согласен на&nbsp;обработку моих персональных данных
-                </label>
-                <button type="submit">Оставить заявку</button>
+              <h3>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
+              <label for="first-name" class="visually-hidden">Имя</label>
+              <input type="text" name="first-name" id="first-name" placeholder="Имя" required>
+              <label for="phone-number" class="visually-hidden">Телефон</label>
+              <input type="tel" name="phone-number" id="phone-number" placeholder="Телефон" maxlength="12" required>
+              <label for="email" class="visually-hidden">Email</label>
+              <input type="email" name="email" id="email" placeholder="Email" required>
+              <label>
+                <input type="checkbox" name="personal-information-agree" value="agree" required>
+                <span></span>
+                Я&nbsp;согласен на&nbsp;обработку моих персональных данных
+              </label>
+              <button type="submit">Оставить заявку</button>
             </form>
           </div>
         </section>
@@ -443,22 +443,28 @@
           <div class="social footer__social">
             <ul class="social__list">
               <li class="social__item">
-                <a class="social__link" href="#">
-                  <svg class="social__icon" width="12" height="20" viewBox="0 0 12 20" xmlns="http://www.w3.org/2000/svg">
+                <a class="social__link" href="#" target="_blank">
+                  <svg class="social__icon" width="12" height="20" viewBox="0 0 12 20" xmlns="http://www.w3.org/2000/svg" aria-labelledby="okTitle okDesc" role="img">
+                    <title id="okTitle">Перейти на Однокласники.</title>
+                    <desc id="catDesc">Логотип однокласников</desc>
                     <use xlink:href="img/sprite_auto.svg#ok"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#">
-                  <svg class="social__icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <a class="social__link" href="#" target="_blank">
+                  <svg class="social__icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-labelledby="yzTitle yzDesc" role="img">
+                    <title id="yzTitle">Перейти на Яндекс дзэн.</title>
+                    <desc id="yzDesc">Логотип Яндекс дзэна</desc>
                     <use xlink:href="img/sprite_auto.svg#yandex-zen"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#">
-                  <svg class="social__icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <a class="social__link" href="#" target="_blank">
+                  <svg class="social__icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-labelledby="rtTitle rtDesc" role="img">
+                    <title id="rtTitle">Перейти на Рэдит.</title>
+                    <desc id="rtDesc">Логотип Рэдита</desc>
                     <use xlink:href="img/sprite_auto.svg#reddit"></use>
                   </svg>
                 </a>

@@ -723,16 +723,41 @@ html {
   display: flex;
 }
 
+.burger .burger__button {
+  position: relative;
+  display: none;
+  border: none;
+  background-color: transparent;
+  margin-top: 28px;
+}
+
+.burger .burger__button::after,
+.burger .burger__button::before {
+  background-color: #f9fbfd;
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 2px;
+}
+
+.burger .burger__button::before {
+  top: -4px;
+  left: 0;
+  -webkit-box-shadow: 0 6px 0 0 #f9fbfd;
+  box-shadow: 0 6px 0 0 #f9fbfd;
+}
+
+.burger .burger__button::after {
+  left: 0;
+  bottom: 4px;
+}
+
 .burger__wrapper {
   top: 0;
   left: 0;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
-}
-
-.burger--noJS .burger__button {
-  display: none;
 }
 
 :root {
@@ -1695,8 +1720,9 @@ html {
 
   .header__button {
     display: block;
+    padding: 0;
     width: 24px;
-    height: 12px;
+    height: 14px;
   }
 
   .logo {
@@ -1766,52 +1792,14 @@ html {
     padding: 0;
   }
 
-  .burger__button {
-    position: relative;
-    display: block;
-    margin-top: 28px;
-  }
-
-  .burger__button::after,
-  .burger__button::before {
-    background-color: #f9fbfd;
-    position: absolute;
-    content: "";
-    width: 24px;
-    height: 2px;
-  }
-
-  .burger__button::before {
-    top: -4px;
-    -webkit-box-shadow: 0 6px 0 0 #f9fbfd;
-    box-shadow: 0 6px 0 0 #f9fbfd;
-  }
-
-  .burger__button::after {
-    bottom: 2px;
-  }
-
-  .burger--noJS {
+  .burger {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
   }
 
-  .burger--noJS .burger__container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding: 0;
-  }
-
-  .burger--noJS .burger__wrapper {
-    width: 100%;
-    background-color: #f9fbfd;
-  }
-
-  .burger--noJS .burger__list {
+  .burger .burger__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1819,6 +1807,42 @@ html {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    padding: 0;
+    background-color: #011c40;
+  }
+
+  .burger .burger__wrapper {
+    width: 100%;
+    background-color: #f9fbfd;
+  }
+
+  .burger .burger__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .burger--close {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .burger--close .burger__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding: 0 15px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    background-color: transparent;
   }
 
   .burger--close .burger__wrapper {
@@ -1831,8 +1855,28 @@ html {
     background-color: rgba(1, 24, 64, 0.7);
   }
 
+  .burger--close .burger__button {
+    display: block;
+  }
+
   .burger--open {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
     min-height: 68px;
+  }
+
+  .burger--open .burger__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding: 0 15px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    background-color: transparent;
   }
 
   .burger--open .burger__logo {
@@ -1846,11 +1890,20 @@ html {
   }
 
   .burger--open .burger__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     position: absolute;
     right: 7px;
     top: 24px;
     width: 24px;
-    height: 12px;
+    height: 14px;
     margin-top: 0;
     z-index: 2;
   }
