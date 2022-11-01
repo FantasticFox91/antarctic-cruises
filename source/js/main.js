@@ -4,6 +4,7 @@ import {initModals} from './modules/modals/init-modals';
 // ---------------------------------
 
 const burgerContainer = document.querySelector('.burger');
+const burgerWrapper = document.querySelector('.burger__wrapper');
 const burgerBtn = document.querySelector('.burger__button');
 const mapContainer = document.querySelector('#map');
 const header = document.querySelector('.header__container');
@@ -16,6 +17,7 @@ const PIN_OFSET_SIZE = [-18, -22];
 window.addEventListener('DOMContentLoaded', () => {
   if (burgerBtn) {
     initBurger();
+    burgerWrapper.addEventListener('click', (e) => burgerClickHandler(e));
   }
 
   if (mapContainer) {
@@ -84,6 +86,15 @@ const setHeaderHeight = () => {
   let headerHeight = header.offsetHeight;
   mainBlock.style.setProperty('--headerHeight', (headerHeight + 38) + 'px');
   mainBlock.style.setProperty('--padding-top', (headerHeight + 200) + 'px');
+};
+
+const burgerClickHandler = (e) => {
+  if (e.target.classList.contains('burger__wrapper')) {
+    toggleBurger();
+  }
+  if (e.target.classList.contains('navigation__link')) {
+    toggleBurger();
+  }
 };
 
 // ---------------------------------

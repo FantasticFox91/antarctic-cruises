@@ -19,6 +19,11 @@
 
     & .card__image {
       opacity: 0;
+      z-index: -1;
+    }
+
+    & .card__content {
+      position: relative;
     }
 
     & .card__button {
@@ -48,6 +53,7 @@
 
   .card__image {
     opacity: 0;
+    z-index: -1;
   }
 
   .card__button {
@@ -104,6 +110,12 @@
   display: flex;
   flex-direction: column;
   min-height: 322px;
+  max-height: 386px;
+  overflow-y: scroll;
+}
+
+.card__content::-webkit-scrollbar {
+  display: none;
 }
 
 .card__text {
@@ -136,10 +148,16 @@
   line-height: 21px;
   font-weight: 600;
   background-color: $color-alice-blue;
-  transition: $trans-default;
+  transition: background-color, color, $trans-default;
   user-select: none;
 
   @include hover {
-    transform: scale(1.05);
+    color: $color-alice-blue;
+    background-color: $color-lochmara;
+  }
+
+  &:focus {
+    outline: 2px solid tomato;
+    outline-offset: -2px;
   }
 }

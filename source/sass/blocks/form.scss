@@ -81,10 +81,11 @@
     background-color: $color-alice-blue;
     cursor: pointer;
     user-select: none;
-    transition: $trans-default;
+    transition: background-color, color, $trans-default;
 
     @include hover {
-      transform: scale(1.05);
+      color: $color-alice-blue;
+      background-color: $color-lochmara;
     }
   }
 
