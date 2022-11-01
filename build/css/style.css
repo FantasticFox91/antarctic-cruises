@@ -652,6 +652,7 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 35px 103px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -664,10 +665,6 @@ html {
   transition: all 0.3s ease;
 }
 
-.logo {
-  margin-top: 35px;
-}
-
 .logo__icon {
   fill: #f9fbfd;
 }
@@ -678,20 +675,24 @@ html {
   display: flex;
   max-width: 950px;
   margin: 0;
+  margin-top: -3px;
   padding: 0;
   list-style-type: none;
-  gap: 33px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 .navigation__item {
-  padding: 42px 0;
+  padding: 10px 0;
+}
+
+.navigation__item:not(:last-of-type) {
+  margin-right: 33px;
 }
 
 .navigation__link {
   position: relative;
-  padding: 42px 0;
+  padding: 10px 0;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -704,16 +705,12 @@ html {
   content: "";
   width: 0;
   height: 1px;
-  bottom: 40px;
+  bottom: 0;
   left: 50%;
   background-color: #f9fbfd;
   -webkit-transition: width, left, 0.3s ease;
   -o-transition: width, left, 0.3s ease;
   transition: width, left, 0.3s ease;
-}
-
-.navigation--footer .navigation__list {
-  max-width: 785px;
 }
 
 .burger {
@@ -725,9 +722,9 @@ html {
 .burger .burger__button {
   position: relative;
   display: none;
+  margin-top: 8px;
   border: none;
   background-color: transparent;
-  margin-top: 28px;
 }
 
 .burger .burger__button::after,
@@ -973,13 +970,43 @@ html {
 .card {
   position: relative;
   min-height: 386px;
+  max-height: 386px;
   padding: 29px 25px 0 25px;
+  overflow: hidden;
   background-color: #011c40;
   -webkit-transition: -webkit-box-shadow 0.3s ease;
   transition: -webkit-box-shadow 0.3s ease;
   -o-transition: box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
+  box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
+}
+
+.card:hover .card__heading {
+  z-index: -1;
+}
+
+.card:hover .card__background {
+  top: 0;
+  left: 0;
+}
+
+.card:hover .card__image {
+  opacity: 0;
+  z-index: -1;
+}
+
+.card:hover .card__content {
+  position: relative;
+}
+
+.card:hover .card__button {
+  position: relative;
+  z-index: 1;
 }
 
 .card:has(.card__button:focus) .card__heading {
@@ -1015,6 +1042,8 @@ html {
 .card__image {
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -1244,6 +1273,7 @@ html {
   line-height: 11px;
   font-weight: 600;
   border: none;
+  color: #011c40;
   background-color: #f9fbfd;
   cursor: pointer;
   -webkit-user-select: none;
@@ -1332,7 +1362,7 @@ html {
 
 .contacts__link--map::before {
   height: 22px;
-  background: url("../img/sprite/pin.svg");
+  background: url("../img/svg/pin.svg");
 }
 
 .contacts__link--map br {
@@ -1352,8 +1382,7 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 50px 103px 44px;
 }
 
 .footer__logo {
@@ -1370,20 +1399,20 @@ html {
   display: flex;
   max-width: 115px;
   margin: 0;
-  margin-top: 3px;
+  margin-top: 11px;
   margin-right: 1px;
   padding: 0;
   list-style-type: none;
   gap: 27px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  min-width: 114px;
 }
 
 .social__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 53px 0;
   width: 20px;
   height: 20px;
   -webkit-box-align: center;
@@ -1447,6 +1476,10 @@ html {
     padding: 0 103px;
   }
 
+  .header__container {
+    padding: 35px 103px;
+  }
+
   .journey__container {
     padding-bottom: 145px;
   }
@@ -1460,8 +1493,7 @@ html {
   }
 
   .footer__container {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 50px 103px 44px;
   }
 }
 
@@ -1471,11 +1503,7 @@ html {
   }
 
   .header__container {
-    padding-right: 45px;
-  }
-
-  .logo {
-    margin-top: 30px;
+    padding: 30px 45px 51px;
   }
 
   .logo__icon {
@@ -1484,19 +1512,18 @@ html {
   }
 
   .navigation__list {
-    gap: 24px;
+    margin-top: -13px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
   }
 
-  .navigation__item {
-    padding: 27px 0 55px;
+  .navigation__item:not(:last-of-type) {
+    margin-right: 24px;
   }
 
   .navigation__link {
-    padding: 27px 0;
     font-size: 14px;
     line-height: 17px;
   }
@@ -1505,18 +1532,9 @@ html {
     bottom: 20px;
   }
 
-  .navigation--footer {
-    max-width: 500px;
-  }
-
   .navigation--footer .navigation__link {
-    padding: 46px 0 50px;
     font-size: 12px;
     line-height: 15px;
-  }
-
-  .navigation--footer .navigation__item {
-    padding: 46px 0 50px;
   }
 
   .main-block {
@@ -1701,18 +1719,22 @@ html {
     display: block;
   }
 
+  .footer__container {
+    padding: 50px 45px;
+  }
+
   .footer__logo {
-    margin-top: 50px;
     margin-right: 25px;
   }
 
   .social__list {
     margin: 0;
     gap: 16px;
+    min-width: 94px;
   }
 
   .social__link {
-    padding: 60px 0;
+    padding: 10px 0;
   }
 
   .social__icon {
@@ -1727,11 +1749,11 @@ html {
   }
 
   .header {
-    min-height: 106px;
+    min-height: 132px;
   }
 
   .header__container {
-    padding: 0 15px;
+    padding: 20px 15px 46px;
   }
 
   .header__button {
@@ -1739,11 +1761,6 @@ html {
     padding: 0;
     width: 24px;
     height: 14px;
-  }
-
-  .logo {
-    margin-top: 0;
-    padding: 20px 0;
   }
 
   .logo__icon {
@@ -1784,7 +1801,7 @@ html {
   }
 
   .navigation--footer {
-    margin-bottom: 21px;
+    margin-bottom: 22px;
   }
 
   .navigation--footer .navigation__list {
@@ -1854,7 +1871,7 @@ html {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    padding: 0 15px;
+    padding: 20px 15px 84px;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
@@ -1898,6 +1915,7 @@ html {
   .burger--open .burger__logo {
     position: absolute;
     left: 50px;
+    top: 20px;
     z-index: 2;
   }
 
@@ -1956,8 +1974,8 @@ html {
 
   .burger--open .burger__list {
     margin-left: 35px;
-    height: 100vh;
-    padding: 74px 25px;
+    height: 102vh;
+    padding: 87px 25px;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
@@ -1967,7 +1985,7 @@ html {
   .main-block {
     min-height: 500px;
     margin-bottom: 66px;
-    padding: 176px 0 178px;
+    padding: 214px 0 178px;
   }
 
   .main-block__background {
@@ -2152,7 +2170,7 @@ html {
   }
 
   .footer__logo {
-    margin-bottom: 15px;
+    margin-bottom: 28px;
     padding: 0;
   }
 
@@ -2185,35 +2203,8 @@ html {
 @media (hover: hover) {
   .navigation__link:hover:not(.focus-visible)::before {
     width: 100%;
+    bottom: 0;
     left: 0;
-  }
-
-  .card:hover:not(.focus-visible) {
-    -webkit-box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
-    box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
-  }
-
-  .card:hover:not(.focus-visible) .card__heading {
-    z-index: -1;
-  }
-
-  .card:hover:not(.focus-visible) .card__background {
-    top: 0;
-    left: 0;
-  }
-
-  .card:hover:not(.focus-visible) .card__image {
-    opacity: 0;
-    z-index: -1;
-  }
-
-  .card:hover:not(.focus-visible) .card__content {
-    position: relative;
-  }
-
-  .card:hover:not(.focus-visible) .card__button {
-    position: relative;
-    z-index: 1;
   }
 
   .card__button:hover:not(.focus-visible) {

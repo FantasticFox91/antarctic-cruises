@@ -73,7 +73,7 @@ const createMap = () => {
 
     myPlacemark = new ymaps.Placemark(DEFAULT_COORDINATES, {}, {
       iconLayout: 'default#image',
-      iconImageHref: '../img/sprite/pin.svg',
+      iconImageHref: '../img/svg/pin.svg',
       iconImageSize: PIN_SIZE,
       iconImageOffset: PIN_OFSET_SIZE,
     });
@@ -85,7 +85,7 @@ const createMap = () => {
 const setHeaderHeight = () => {
   let headerHeight = header.offsetHeight;
   mainBlock.style.setProperty('--headerHeight', (headerHeight + 38) + 'px');
-  mainBlock.style.setProperty('--padding-top', (headerHeight + 200) + 'px');
+  mainBlock.style.setProperty('--padding-top', (headerHeight + 194) + 'px');
 };
 
 const burgerClickHandler = (e) => {

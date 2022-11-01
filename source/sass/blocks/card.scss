@@ -1,11 +1,13 @@
 .card {
   position: relative;
   min-height: 386px;
+  max-height: 386px;
   padding: 29px 25px 0 25px;
+  overflow: hidden;
   background-color: $color-tangaroa;
   transition: box-shadow $trans-default;
 
-  @include hover {
+  &:hover {
     box-shadow: 0 4px 35px $color-tangaroa-form-opacity;
 
     & .card__heading {
@@ -74,6 +76,7 @@
 .card__image {
   height: 100%;
   width: 100%;
+  object-fit: cover;
   transition: opacity $trans-default;
   background-color: $color-tangaroa;
 }

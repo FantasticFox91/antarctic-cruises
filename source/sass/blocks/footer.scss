@@ -4,12 +4,14 @@
 
 .footer__container {
   display: flex;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 50px 103px 44px;
 
   @include vp-1439 {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 50px 103px 44px;
+  }
+
+  @include vp-1023 {
+    padding: 50px 45px;
   }
 
   @include vp-767 {
@@ -23,12 +25,11 @@
   margin-right: 40px;
 
   @include vp-1023 {
-    margin-top: 50px;
     margin-right: 25px;
   }
 
   @include vp-767 {
-    margin-bottom: 15px;
+    margin-bottom: 28px;
     padding: 0;
   }
 }

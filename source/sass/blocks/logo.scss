@@ -1,16 +1,3 @@
-.logo {
-  margin-top: 35px;
-
-  @include vp-1023 {
-    margin-top: 30px;
-  }
-
-  @include vp-767 {
-    margin-top: 0;
-    padding: 20px 0;
-  }
-}
-
 .logo__icon {
   fill: $color-alice-blue;
 

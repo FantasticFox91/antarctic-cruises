@@ -4,9 +4,9 @@
   .burger__button {
     position: relative;
     display: none;
+    margin-top: 8px;
     border: none;
     background-color: transparent;
-    margin-top: 28px;
 
     &::after,
     &::before {
@@ -61,7 +61,7 @@
 
     & .burger__container {
       flex-direction: row;
-      padding: 0 15px;
+      padding: 20px 15px 84px;
       align-items: flex-start;
       background-color: transparent;
     }
@@ -95,6 +95,7 @@
     & .burger__logo {
       position: absolute;
       left: 50px;
+      top: 20px;
       z-index: 2;
     }
 
@@ -140,8 +141,8 @@
 
     & .burger__list {
       margin-left: 35px;
-      height: 100vh;
-      padding: 74px 25px;
+      height: 102vh;
+      padding: 87px 25px;
       align-items: flex-start;
       background-color: $color-alice-blue;
     }
