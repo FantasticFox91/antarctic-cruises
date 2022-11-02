@@ -1360,11 +1360,6 @@ html {
   left: 0;
 }
 
-.contacts__link--map::before {
-  height: 22px;
-  background: url("../img/svg/pin.svg");
-}
-
 .contacts__link--map br {
   display: none;
 }
@@ -1374,9 +1369,9 @@ html {
   vertical-align: middle;
 }
 
-.contacts__link--phone::before {
-  top: 2px;
-  background: url("../img/sprite/phone.svg");
+.contacts__icon {
+  position: absolute;
+  left: 0;
 }
 
 .footer {
@@ -1716,16 +1711,16 @@ html {
     display: none;
   }
 
-  .contacts__link--map::before {
-    top: 5px;
-  }
-
   .contacts__link--map br {
     display: block;
   }
 
+  .contacts__link--map .contacts__icon {
+    top: 5px;
+  }
+
   .footer__container {
-    padding: 50px 45px;
+    padding: 50px 45px 39px;
   }
 
   .footer__logo {
@@ -2073,6 +2068,7 @@ html {
   .card {
     padding: 29px 25px 0;
     max-width: 270px;
+    min-width: 270px;
   }
 
   .card__heading {
@@ -2142,7 +2138,7 @@ html {
   }
 
   .contacts__container {
-    padding-bottom: 66px;
+    padding-bottom: 65px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
