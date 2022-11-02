@@ -129,6 +129,11 @@
   }
 }
 
+.contacts__link--phone {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .contacts__link--phone::before {
   top: 2px;
   background: url("../img/sprite/phone.svg");

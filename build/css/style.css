@@ -1077,7 +1077,7 @@ html {
   -ms-flex-direction: column;
   flex-direction: column;
   min-height: 322px;
-  max-height: 386px;
+  max-height: 350px;
   overflow-y: scroll;
 }
 
@@ -1367,6 +1367,11 @@ html {
 
 .contacts__link--map br {
   display: none;
+}
+
+.contacts__link--phone {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .contacts__link--phone::before {
@@ -2060,12 +2065,14 @@ html {
 
   .catalog__list {
     padding: 0 10px;
+    justify-items: center;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 
   .card {
     padding: 29px 25px 0;
+    max-width: 270px;
   }
 
   .card__heading {
