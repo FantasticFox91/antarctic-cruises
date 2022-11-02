@@ -73,7 +73,7 @@ const createMap = () => {
 
     myPlacemark = new ymaps.Placemark(DEFAULT_COORDINATES, {}, {
       iconLayout: 'default#image',
-      iconImageHref: '../img/svg/pin.svg',
+      iconImageHref: 'img/svg/pin.svg',
       iconImageSize: PIN_SIZE,
       iconImageOffset: PIN_OFSET_SIZE,
     });
