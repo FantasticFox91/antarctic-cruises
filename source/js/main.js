@@ -17,7 +17,8 @@ const PIN_OFSET_SIZE = [-18, -22];
 window.addEventListener('DOMContentLoaded', () => {
   if (burgerBtn) {
     initBurger();
-    burgerWrapper.addEventListener('click', (e) => burgerClickHandler(e));
+    breakpointChecker();
+
   }
 
   if (mapContainer) {
@@ -94,6 +95,15 @@ const burgerClickHandler = (e) => {
   }
   if (e.target.classList.contains('navigation__link')) {
     toggleBurger();
+  }
+};
+
+const breakpoint = window.matchMedia(`(min-width:768px)`);
+const breakpointChecker = () => {
+  if (breakpoint.matches) {
+    burgerBtn.removeEventListener('click', toggleBurger);
+  } else {
+    burgerWrapper.addEventListener('click', (e) => burgerClickHandler(e));
   }
 };
 
